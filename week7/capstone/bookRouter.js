@@ -7,7 +7,7 @@ const book = [
     { 
         firstName: "John",
         lastName: "Tolkien", 
-        genre: "Fantasy",
+        genre: "fantasy",
         isAlive: "false", 
         bookByAuthor: "The Lord of the Rings",
         numBooks: 8, 
@@ -17,7 +17,7 @@ const book = [
     { 
         firstName: "Becky",
         lastName: "Eldredge", 
-        genre: "NonFiction",
+        genre: "nonfiction",
         isAlive: "true", 
         bookByAuthor: "The Inner Chapel",
         numBooks: 2, 
@@ -27,7 +27,7 @@ const book = [
     { 
         firstName: "Drew",
         lastName: "Karpyshyn", 
-        genre: "Science Fiction",
+        genre: "scifi",
         isAlive: "true", 
         bookByAuthor: "Rule of Two, Darth Bane 2",
         numBooks: 24, 
@@ -54,7 +54,7 @@ bookRouter.get("/:bookId", (req, res, next) => {
 })
 
 // Query
-bookRouter.get("/genre", (req, res, next) => {
+bookRouter.get("/search/genre", (req, res, next) => {
     const genre = req.query.genre
     if(!genre){
         const error = new Error("You must provide a genre")

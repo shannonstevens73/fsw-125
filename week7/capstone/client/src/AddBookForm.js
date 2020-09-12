@@ -20,6 +20,7 @@ function AddBookForm(props){
             <h3>Add a Book</h3>            
             
             <input
+                id="firstName"
                 type="text"
                 name="firstName"
                 value={inputs.firstName}
@@ -28,6 +29,7 @@ function AddBookForm(props){
                 
             
             <input
+                id="lastName"
                 type="text"
                 name="lastName"
                 value={inputs.lastName}
@@ -43,32 +45,12 @@ function AddBookForm(props){
                 value={inputs.genre}
                 onChange={handleChange}
                 placeholder="genre"
-            />
-
-            Is the author alive?
-            <label>
-                <input 
-                    type="radio" 
-                    name="isAlive"
-                    value="Alive"
-                    checked={inputs.isAlive === "Alive"}
-                    onChange={handleChange}
-                /> Alive
-            </label>
-
-            <label>
-                <input 
-                    type="radio" 
-                    name="isAlive"
-                    value="Dead"
-                    checked={inputs.isAlive === "Dead"}
-                    onChange={handleChange}
-                /> Deceased
-            </label>
+            />           
 
             <br /><br />
 
             <input
+                id="bookByAuthor"
                 type="text"
                 name="bookByAuthor"
                 value={inputs.bookByAuthor}
@@ -76,15 +58,42 @@ function AddBookForm(props){
                 placeholder="book by author"/>      
             
             <input
+                id="number"
                 type="number"
                 name="numBooks"
                 value={inputs.numBooks}
                 onChange={handleChange}
                 placeholder="number of books written"/>  
 
-            <br /><br />            
+            
 
-            <button>{props.buttonText}</button>
+            <div id="alive">
+                Author alive?
+                <br />
+                <label>
+                    Alive
+                    <input                        
+                        type="radio" 
+                        name="isAlive"
+                        value="Alive"
+                        checked={inputs.isAlive === "Alive"}
+                        onChange={handleChange}
+                    /> 
+                </label>
+
+                <label>
+                    Dead
+                    <input 
+                        type="radio" 
+                        name="isAlive"
+                        value="Dead"
+                        checked={inputs.isAlive === "Dead"}
+                        onChange={handleChange}
+                    /> 
+                </label>
+            </div>    
+
+            <button id="addBookButton">{props.buttonText}</button>
         </form>
     )
 

@@ -6,62 +6,192 @@
   color: navy;
 }
 
-body {
-  background-image: url("background.png");
-  background-size: contain;
+@media screen and (max-width: 500px) {
+
+  body {
+    background-image: url("background.png");
+    background-size: contain;
+    
+  }
+
+  p {
+    margin: 5px;    
+  }
+
+  .bookContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0 32px;    
+    font-size: 13px;
+  }
+
+  .book {
+    grid-template-rows: auto;
+    border: 1px solid navy;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;    
+    font-size: 10px;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    border: 1px solid navy;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+  }
   
+  h3 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    margin: 5px;
+  }
+
+  #firstName{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  #lastName{
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+  }
+
+  #genre{
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+  }
+
+  #authorLiving {
+    margin-top: 15px;
+    font-size: 10px;
+  }
+
+  #alive{
+    grid-column: 2 / 3;
+    grid-row: 7 / 8;
+    margin-top: 5px;
+    font-size: 10px;
+  }  
+
+  #bookByAuthor{
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+  }
+
+  #number{
+    grid-column: 2 / 3;
+    grid-row: 6 / 7;
+  }
+
+  input {
+    padding: 10px;
+    font-size: 10px;
+    border: 1px solid navy;
+    border-radius: 8px;
+    margin: 5px
+  }
+
+  #addBookButton {
+    grid-column: 2 / 3;
+    grid-row: 8 / 9;
+    width: 65px;
+    height: 25px;
+    margin-top: 5px;
+    padding: 5px;
+    margin-left: 45px;
+    border-radius: 5px;
+    font-size: 10px;   
+    background-color: navy;
+    color: white; 
+  }
+
+  .editButton {    
+    width: 50px;
+    height: 20px;
+    margin-left: 15px;
+    margin-top: 5px;    
+    border-radius: 5px;
+    font-size: 10px;   
+    background-color: navy;
+    color: white; 
+  }
+
+  .deleteButton {
+    background-color: darkorchid;
+    color: whitesmoke;    
+    font-size: 10px; 
+    width: 50px;
+    height: 20px;    
+  }
 }
 
-h3 {
-  margin: 5px;
-}
 
-p {
-  margin: 5px;    
-}
+@media screen and (min-width: 501px) {
 
-.bookContainer {
-  display: flex;
-  flex-direction: column;
-  margin: 0 32px;
-}
+  body {
+    background-image: url("background.png");
+    background-size: contain;    
+  }
 
-.book {
-  border: 1px solid navy;
-  padding: 10px;
-  margin: 5px;
-  text-align: center;
-}
+  h3 {
+    margin: 5px;
+  }
 
-form {
-  border: 1px solid navy;
-  padding: 10px;
-  margin: 5px;
-  text-align: center;
-}
+  p {
+    margin: 5px;    
+  }
 
-input {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid navy;
-  border-radius: 8px;
-  margin: 5px
-}
+  .bookContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 0 32px;
+  }
 
-button {
-  padding: 5px;
-  border-radius: 5px;
-  font-size: 16px;   
-  background-color: navy;
-  color: white; 
-}
+  .book {
+    border: 1px solid navy;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+  }
 
-.deleteButton {
-  background-color: darkorchid;
-  color: whitesmoke;
-  margin-right: 10px;
-}
+  form {
+    border: 1px solid navy;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+  }
 
-#genre {
-  margin-right: 50px;
+  #alive{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  } 
+
+  input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid navy;
+    border-radius: 8px;
+    margin: 5px
+  }
+
+  button {
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 16px;   
+    background-color: navy;
+    color: white; 
+  }
+
+  .deleteButton {
+    background-color: darkorchid;
+    color: whitesmoke;
+    margin-right: 10px;
+  }
 }
