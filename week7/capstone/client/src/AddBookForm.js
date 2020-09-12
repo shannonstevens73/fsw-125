@@ -17,7 +17,7 @@ function AddBookForm(props){
 
     return (
         <form onSubmit={handleSubmit}>
-            <h3>Add a Book</h3>            
+            <h3>Add an Author</h3>            
             
             <input
                 id="firstName"

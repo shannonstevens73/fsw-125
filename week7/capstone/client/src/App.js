@@ -46,7 +46,7 @@ function App() {
         <div className="bookContainer">
           <AddBookForm
             submit={addBook} 
-            buttonText="Add Book"
+            buttonText="Add Author"
           />
           { book.map(book => 
             <Book 
